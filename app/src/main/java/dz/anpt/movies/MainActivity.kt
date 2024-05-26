@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val movieAdapter : MovieAdapter = MovieAdapter()
+        val movieAdapter : MovieAdapter = MovieAdapter(this)
         recyclerView.adapter = movieAdapter
 
         recyclerView.setHasFixedSize(true)

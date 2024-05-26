@@ -1,8 +1,9 @@
 package dz.anpt.movies.Model
 
-import com.google.gson.annotations.SerializedName
-import java.util.*
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+import java.util.*
 
 data class Movie(
     @SerializedName("id")
@@ -13,8 +14,10 @@ data class Movie(
     val overview: String,
     @SerializedName("poster_path")
     val posterPath: String,
+    @SerializedName("backdrop_path")
+    val backdropPath: String,
     @SerializedName("release_date")
     val releaseDate: Date,
     @SerializedName("vote_count")
     val voteCount: Int,
-)
+) : Serializable
